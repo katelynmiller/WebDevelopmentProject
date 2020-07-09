@@ -1,0 +1,123 @@
+body {
+    background-color: #EAF2EF;
+    margin: 0;
+}
+
+p {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: justify;
+    
+}
+
+#first {
+    margin-top: 10%;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	top: 0;
+	font-family: courier;
+	display: flex;
+	}
+
+li {
+	padding: 0;
+	top: 0;
+	font-family: courier;
+}
+
+#welcome {
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+}
+  
+#navbar, nav {
+	background-color: #75B09C;
+    width: 100%;
+    padding: 0px;
+    text-align: right;
+    top: 0;
+    position: fixed;
+}
+
+/* Links inside the navbar */
+#navbar li a, .dropdown, .dropdownbutton{
+	display: block;
+	color: #0D090A;
+	padding: 14px 10px;
+	font-size: 20px;
+	text-decoration: none;
+	margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+}
+
+.dropdownbutton {
+    border: none;
+    background: transparent;
+    font: inherit;
+}
+
+#navbar ul {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+
+#navbar li, .dropdown {
+	display: inline-block;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+
+a:link, a:visited {
+	color: #0D090A;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #A0CA92;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: rgba(205, 216, 212, 0.9);
+	z-index: 1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Add a pink text color to navbar links on hover */
+#navbar a:hover, .dropdown:hover, .dropdownbutton:hover, .dropdown-content a:hover {
+    color: #361F27;
+    background-color: #A0CA92;
+}
+
+
+/* Links inside the dropdown */
+.dropdown-content a {
+	font-family: courier;
+	text-decoration: none;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+#footer, #footer a {
+    text-align: center;
+    text-emphasis: emphasis;
+}

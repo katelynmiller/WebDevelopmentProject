@@ -9,11 +9,16 @@ p {
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: justify;
+    font-size: 20px;
     
 }
 
 #first {
-    margin-top: 10%;
+    margin-top: 50px;
+}
+
+table#first  {
+    margin-top: 75px;
 }
 
 ul {
@@ -120,4 +125,64 @@ a:hover {
 #footer, #footer a {
     text-align: center;
     text-emphasis: emphasis;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=submit] {
+    background-color: #A0CA92;
+    border-color: #75B09C;
+    color: #361F27;
+	font-family: courier;
+	font-size: 20px;
+}
+
+.center td input[type=submit] {
+    margin: 25px;
+}
+
+input[type=submit]:hover {
+    background-color: #75B09C;
+    border-color: #75B09C;
+    color: #0D090A;
+	font-family: courier;
+	font-size: 20px;
+}
+
+table th {
+    background-color: #A0CA92;
+    text-align: center;
+    font-size: 18px;
+}
+
+table.center {
+    border: thin;
+}
+
+#signupPrompt {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+footer {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(205, 216, 212, 0.9);
+}
+
+input#signUp, input#login {
+    margin-top: 5px;
+    margin-bottom: 35px;
+}
+
+p.signUptxt, p.loginTxt {
+    font-size: 16px;
+    text-align: center;
 }

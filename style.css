@@ -1,5 +1,8 @@
+html {
+    font-family: 'Gentium Book Basic', serif;
+}
 body {
-    background-color: #EAF2EF;
+    background-color: #FFECD1;
     margin: 0;
 }
 
@@ -25,14 +28,12 @@ ul {
 	list-style-type: none;
 	padding: 0;
 	top: 0;
-	font-family: courier;
 	display: flex;
 	}
 
 li {
 	padding: 0;
 	top: 0;
-	font-family: courier;
 }
 
 #welcome {
@@ -42,7 +43,7 @@ li {
 }
   
 #navbar, nav {
-	background-color: #75B09C;
+	background-color: #15616D;
     width: 100%;
     padding: 0px;
     text-align: right;
@@ -53,7 +54,7 @@ li {
 /* Links inside the navbar */
 #navbar li a, .dropdown, .dropdownbutton{
 	display: block;
-	color: #0D090A;
+	color: #FFECD1;
 	padding: 14px 10px;
 	font-size: 20px;
 	text-decoration: none;
@@ -91,29 +92,27 @@ a:link, a:visited {
 }
 
 a:hover {
-	color: #A0CA92;
+	color: #FF7D00;
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
 	display: none;
 	position: absolute;
-	background-color: rgba(205, 216, 212, 0.9);
+	background-color: rgba(21, 97, 109, 0.6);
 	z-index: 1;
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-/* Add a pink text color to navbar links on hover */
+
 #navbar a:hover, .dropdown:hover, .dropdownbutton:hover, .dropdown-content a:hover {
-    color: #361F27;
-    background-color: #A0CA92;
+    background-color: #001524;
 }
 
 
 /* Links inside the dropdown */
 .dropdown-content a {
-	font-family: courier;
 	text-decoration: none;
 }
 
@@ -124,7 +123,6 @@ a:hover {
 
 #footer, #footer a {
     text-align: center;
-    text-emphasis: emphasis;
 }
 
 .center {
@@ -133,33 +131,25 @@ a:hover {
 }
 
 input[type=submit] {
-    background-color: #A0CA92;
-    border-color: #75B09C;
-    color: #361F27;
-	font-family: courier;
-	font-size: 20px;
-}
-
-.center td input[type=submit] {
-    margin: 25px;
+    background-color: #FF7D00;
+    border-color: #78290F;
+    color: #78290F;
+    font-size: 20px;
+    font-family: 'Gentium Book Basic', serif;
 }
 
 input[type=submit]:hover {
-    background-color: #75B09C;
-    border-color: #75B09C;
-    color: #0D090A;
-	font-family: courier;
+    background-color: #78290F;
+    border-color: #78290F;
+    color: #FFECD1;
 	font-size: 20px;
 }
 
 table th {
-    background-color: #A0CA92;
+    background-color: #FF7D00;
+    color: #78290F;
     text-align: center;
     font-size: 18px;
-}
-
-table.center {
-    border: thin;
 }
 
 #signupPrompt {
@@ -174,12 +164,13 @@ footer {
     position: fixed;
     width: 100%;
     text-align: center;
-    background-color: rgba(205, 216, 212, 0.9);
+	background-color: rgba(21, 97, 109, 0.6);
 }
 
-input#signUp, input#login {
+table form {
     margin-top: 5px;
     margin-bottom: 35px;
+    text-align: center;
 }
 
 p.signUptxt, p.loginTxt {

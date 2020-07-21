@@ -1,179 +1,229 @@
 html {
-    font-family: 'Gentium Book Basic', serif;
+  font-family: "Gentium Book Basic", serif;
 }
 body {
-    background-color: #FFECD1;
-    margin: 0;
+  background-color: #ffecd1;
+  margin: 0;
 }
 
 p {
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: justify;
-    font-size: 20px;
-    
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: justify;
+  font-size: 20px;
 }
 
 #first {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
-table#first  {
-    margin-top: 75px;
+table#first {
+  margin-top: 75px;
 }
 
 ul {
-	list-style-type: none;
-	padding: 0;
-	top: 0;
-	display: flex;
-	}
+  list-style-type: none;
+  padding: 0;
+  top: 0;
+  display: flex;
+}
 
 li {
-	padding: 0;
-	top: 0;
+  padding: 0;
+  top: 0;
 }
 
-#welcome {
-    margin-top: 50px;
-    width: 100%;
-    height: auto;
+#genre-carousel {
+  margin-top: 10px;
+  position: relative;
 }
-  
-#navbar, nav {
-	background-color: #15616D;
-    width: 100%;
-    padding: 0px;
-    text-align: right;
-    top: 0;
-    position: fixed;
+.carousel-inner {
+  height: 310px;
+}
+.wrapper {
+  display: grid;
+  margin-top: 100px;
+  grid-template-columns: auto auto;
+  grid-template-rows: 80px 80px 80px;
+  column-gap: normal;
+  row-gap: 15px;
+  grid-gap: 10px;
+}
+
+#history {
+  margin: 100px;
+  grid-column: 1 / span 2;
+  grid-row: first-line / 4;
+}
+#sci-fi {
+  margin: 100px;
+  grid-column: 3 / span 2;
+  grid-row: first-line / 4;
+}
+
+.item.active {
+  height: 310px !important;
+}
+
+.item img {
+  object-fit: cover;
+  height: 100% !important;
+}
+#welcome {
+  margin-top: 50px;
+  width: 100%;
+  height: auto;
+}
+
+#navbar,
+nav {
+  background-color: #15616d;
+  width: 100%;
+  padding: 0px;
+  text-align: right;
+  top: 0;
+  position: fixed;
 }
 
 /* Links inside the navbar */
-#navbar li a, .dropdown, .dropdownbutton{
-	display: block;
-	color: #FFECD1;
-	padding: 14px 10px;
-	font-size: 20px;
-	text-decoration: none;
-	margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    height: auto;
+#navbar li a,
+.dropdown,
+.dropdownbutton {
+  display: block;
+  color: #ffecd1;
+  padding: 14px 10px;
+  font-size: 20px;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
 }
 
 .dropdownbutton {
-    border: none;
-    background: transparent;
-    font: inherit;
+  border: none;
+  background: transparent;
+  font: inherit;
 }
 
 #navbar ul {
-	display: block;
-	margin: 0;
-	padding: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
-
-#navbar li, .dropdown {
-	display: inline-block;
-	text-align: center;
-	margin: 0;
-	padding: 0;
+#navbar li,
+.dropdown {
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-
-a:link, a:visited {
-	color: #0D090A;
-	background-color: transparent;
-	text-decoration: none;
+a:link,
+a:visited {
+  color: #0d090a;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 a:hover {
-	color: #FF7D00;
+  color: #ff7d00;
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: rgba(21, 97, 109, 0.6);
-	z-index: 1;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  display: none;
+  position: absolute;
+  background-color: rgba(21, 97, 109, 0.6);
+  z-index: 1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-
-#navbar a:hover, .dropdown:hover, .dropdownbutton:hover, .dropdown-content a:hover {
-    background-color: #001524;
+#navbar a:hover,
+.dropdown:hover,
+.dropdownbutton:hover,
+.dropdown-content a:hover {
+  background-color: #001524;
 }
-
 
 /* Links inside the dropdown */
 .dropdown-content a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-	display: block;
+  display: block;
 }
 
-#footer, #footer a {
-    text-align: center;
+#footer,
+#footer a {
+  text-align: center;
 }
 
 .center {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-input[type=submit] {
-    background-color: #FF7D00;
-    border-color: #78290F;
-    color: #78290F;
-    font-size: 20px;
-    font-family: 'Gentium Book Basic', serif;
+input[type="submit"] {
+  background-color: #ff7d00;
+  border-color: #78290f;
+  color: #78290f;
+  font-size: 20px;
+  font-family: "Gentium Book Basic", serif;
 }
 
-input[type=submit]:hover {
-    background-color: #78290F;
-    border-color: #78290F;
-    color: #FFECD1;
-	font-size: 20px;
+input[type="text"] {
+  margin-top: 8px;
+  margin-right: 16px;
+  float: left;
+  background-color: #ff7d00;
+  border-color: #78290f;
+  font-family: "Gentium Book Basic", serif;
+}
+
+input[type="submit"]:hover {
+  background-color: #78290f;
+  border-color: #78290f;
+  color: #ffecd1;
+  font-size: 20px;
 }
 
 table th {
-    background-color: #FF7D00;
-    color: #78290F;
-    text-align: center;
-    font-size: 18px;
+  background-color: #ff7d00;
+  color: #78290f;
+  text-align: center;
+  font-size: 18px;
 }
 
 #signupPrompt {
-    font-size: 14px;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 0;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 footer {
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-    text-align: center;
-	background-color: rgba(21, 97, 109, 0.6);
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(21, 97, 109, 0.6);
 }
 
 table form {
-    margin-top: 5px;
-    margin-bottom: 35px;
-    text-align: center;
+  margin-top: 5px;
+  margin-bottom: 35px;
+  text-align: center;
 }
 
-p.signUptxt, p.loginTxt {
-    font-size: 16px;
-    text-align: center;
+p.signUptxt,
+p.loginTxt {
+  font-size: 16px;
+  text-align: center;
 }

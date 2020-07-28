@@ -1,4 +1,29 @@
 <html>
+<?php
+require_once('config.php');
+session_start();
+
+define('UN', 'username');
+define('PW', 'password');
+
+function getUsername()
+{
+    $value = "";
+    if (isset($_POST[UN])) {
+        $value = $_POST[UN];
+    }
+    return $value;
+}
+
+function getPassword()
+{
+    $value2 = "";
+    if (isset($_POST[PW])) {
+        $value2 = $_POST[PW];
+    }
+    return $value2;
+}
+?>
 
 <head>
     <meta charset="utf-8">
@@ -10,21 +35,26 @@
 
 <nav id="navbar">
     <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li class="dropdown">
-            <button class="dropdownbutton">Genres</button>
+            <button class="dropdownbutton" href="genre.php">Genres</button>
             <div class="dropdown-content">
-                <a href="nonfictionCurrent.html">Non-Fiction</a>
+                <a href="nonfictionCurrent.php">Non-Fiction</a>
                 <a href="">More Coming Soon...</a>
-                <a href="pastBooks.html">Past Reads</a>
+                <a href="pastBooks.php">Past Reads</a>
             </div>
         </li>
-        <li><a href="login.html">Login </a></li>
+        <li><?php if (empty($_SESSION['username'])) {
+                echo "<a href='SignUp.php'>Sign Up</a>";
+            } else {
+                echo "<a href='Profile.php'>Profile</a>";
+            } ?></li>
     </ul>
 </nav>
 
 <body>
-    <form id="login" method="get" action="Profile.php" >
+
+    <form id="login" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <table class="center" id="first" style="background-color: rgba(255, 125, 0, 0.2);">
             <tr>
                 <th colspan="2">
@@ -32,11 +62,16 @@
                     </td>
             </tr>
             <tr>
+                <td colspan="2">
+
+                </td>
+            </tr>
+            <tr>
                 <td style="text-align: right;">
                     <label><b>Username: </b></label>
                 </td>
                 <td style="text-align: left;">
-                    <input id="username" type="text" />
+                    <input id="username" name="<?php echo UN; ?>" type="text" value="<?php echo getUsername(); ?>" />
                 </td>
             </tr>
             <tr>
@@ -44,7 +79,7 @@
                     <label><b>Password: </b></label>
                 </td>
                 <td style="text-align: left;">
-                    <input id="password" type="password" />
+                    <input id="password" name="<?php echo PW; ?>" type="password" value="<?php echo getPassword(); ?>" />
                 </td>
             </tr>
             <tr>
@@ -64,7 +99,36 @@
         </table>
     </form>
 </body>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = getUsername();
+    $password = getPassword();
+    $db_table = 'user';
+    $numOfRows = 0;
+    if (!empty($name) && !empty($password)) {
+        $error = mysqli_connect_error();
+        if ($error != null) {
+            $output = "<p>Unable to connect to database</p>" . $error;
+            exit($output);
+        } else {
+            $sql = "SELECT * FROM " . $db_table . " WHERE user_name='" . $name . "' AND user_password='" . $password."'";
+            if ($result = mysqli_query($connection, $sql)) {
+                $numOfRows = $result->num_rows;
+            } else {
+            }
+        }
+    }
 
+    if ($numOfRows == 1) {
+        $_SESSION["username"] = $name;
+        header("Location: Profile.php");
+    } else {
+        $error = "Your username or password is invalid";
+        echo $error;
+    }
+    mysqli_close($connection);
+}
+?>
 <footer>
     <p id="footer">
         <a href="mailto:abc@example.com">

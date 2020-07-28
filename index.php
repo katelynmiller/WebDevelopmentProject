@@ -1,5 +1,5 @@
 <html>
-<?php include('session.php'); ?>
+<?php include('session.php');?>
 <head>
     <meta charset="utf-8">
     <title>BookWrm | Welcome</title>    
@@ -13,6 +13,7 @@
         <li><a href="index.php">Home</a></li>
         <li class="dropdown">
             <button class="dropdownbutton">Genres</button>
+            <div class="dropdown-content">
                 <a href="nonfictionCurrent.php">Non-Fiction</a>
                 <a href="">More Coming Soon...</a>
                 <a href="pastBooks.php">Past Reads</a>

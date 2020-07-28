@@ -2,7 +2,8 @@
    include('config.php');
    session_start();
    
-   $user_check = $_SESSION['username'];
+   $user_check = $_SESSION["username"];
+   echo $user_check;
    
    $ses_sql = mysqli_query($connection,"SELECT user_name FROM user WHERE user_name = '$user_check'");
    
@@ -10,7 +11,7 @@
    
    $login_session = $row['user_name'];
    
-   if(!isset($_SESSION['login_user'])){
+   if(!isset($_SESSION["username"])){
       header("location:login.php");
       die();
    }

@@ -1,3 +1,11 @@
+ <?php
+    $db=new mysqli('localhost','root','wit123','bookwrm');
+    $user="root";
+    $pass="wit123";
+    $SELECT_GENRES =  "SELECT * FROM genres ORDER BY bookGenreId";
+    $genre_result = $db->query($SELECT_GENRES);
+?> 
+
 <html>
   <head>
     <link
@@ -5,10 +13,6 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="C:\Users\millerk9\Documents\Summer 2020\WebDevelopmentProject-katelyn_branch\style.css"
     />
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -25,6 +29,7 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <nav id="navbar">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -41,23 +46,34 @@
     </nav>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="card-group">
-        <div class="card">
-          <div class="card-body">
-            <img src="history.jpg" class="card-img-top" />
-            <h5 class="card-title">History</h5>
-            <p class="card-text">
-              Books relating to diffrent hisotrical ages and subjects.
-            </p>
-            <a href="resources.html" class="btn btn-primary"
-              >Click here for History books and resources related to this
-              genre</a
-            >
+  <div class='wrapper'>
+    <?php
+    echo "<div class='col-sm-6'>";
+    while($row = $genre_result->fetch_assoc()){
+      
+     
+      echo "<div class='card'>";
+        echo "<div class='card-body'>";
+   
+    echo " <img src='" .$row['imageDir']. "' class='card-img-top' /> ";
+    echo "<h5 class='card-title'>".$row['name']."</h5>";
+    echo "<a href='resources.html' class='btn btn-primary'
+              >Click here for " .$row['name'] ." books and resources related to this
+              genre</a>";
+    echo "</div>";
+echo "        </div>";
+
+
+
+    }
+    echo "        </div>";
+    ?>
+
           </div>
-        </div>
-      </div>
-      <div class="col-sm-6">
+  </body>
+</html>
+
+<!-- <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
             <img src="scifi.jpg" class="card-img-top" />
@@ -73,6 +89,4 @@
           </div>
         </div>
       </div>
-    </div>
-  </body>
-</html>
+    </div> -->

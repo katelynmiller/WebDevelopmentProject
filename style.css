@@ -36,13 +36,10 @@ li {
 }
 
 .wrapper {
-  display: grid;
   margin-top: 100px;
-  grid-template-columns: auto auto;
-  grid-template-rows: 80px 80px 80px;
-  column-gap: normal;
-  row-gap: 15px;
-  grid-gap: 10px;
+}
+.box {
+  padding: 20px;
 }
 .list-group-item,
 .list-group-item-action {

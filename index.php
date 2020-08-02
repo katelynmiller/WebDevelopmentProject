@@ -14,7 +14,7 @@ session_start();
 <nav id="navbar">
     <ul>
         <li><a href="index.php">Home</a></li>
-        <li><a href="Genre.php">Genre</a></li>
+        <li><a href="genre.php">Genre</a></li>
         <?php 
         if(empty($_SESSION['username'])) {
             //if not on index of login page, instead echo:

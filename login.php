@@ -6,6 +6,8 @@ session_start();
 define('UN', 'username');
 define('PW', 'password');
 
+$error = "";
+
 function getUsername()
 {
     $value = "";
@@ -63,7 +65,7 @@ function getPassword()
             </tr>
             <tr>
                 <td colspan="2">
-
+                    <?php echo $error; ?>
                 </td>
             </tr>
             <tr>
@@ -129,6 +131,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_close($connection);
 }
 ?>
+<script>
+    window.onload = function() {
+        var boxUsername = document.getElementById("username");
+        var boxPassword = document.getElementById("password");
+        if (boxUsername.value == "" ) {
+            boxUsername.focus();
+        } else {
+            boxPassword.focus();
+        }
+    }
+</script>
 <footer>
     <p id="footer">
         <a href="mailto:abc@example.com">

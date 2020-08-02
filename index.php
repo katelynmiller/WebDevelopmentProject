@@ -1,5 +1,7 @@
 <html>
 
+<?php include('session.php');?>
+
 <head>
     <meta charset="utf-8">
     <title>BookWrm | Welcome</title>    
@@ -10,16 +12,18 @@
 
 <nav id="navbar">
     <ul>
-        <li><a href="index.html">Home</a></li>
+
+        <li><a href="index.php">Home</a></li>
         <li class="dropdown">
             <button class="dropdownbutton">Genres</button>
             <div class="dropdown-content">
-                <a href="nonfictionCurrent.html">Non-Fiction</a>
+                <a href="nonfictionCurrent.php">Non-Fiction</a>
                 <a href="">More Coming Soon...</a>
-                <a href="pastBooks.html">Past Reads</a>
+                <a href="pastBooks.php">Past Reads</a>
             </div>
         </li>
-        <li><a href="login.html">Login </a></li>
+        <li><?php if(empty($_SESSION['username'])) {echo "<a href='SignUp.php'>Sign Up</a>"; } else { echo "<a href='Profile.php'>Profile</a>"; }?></li>
+
     </ul>
 </nav>
 
@@ -52,12 +56,16 @@
         </tr>
         <tr>
             <td>
-                <form action="signUp.html">
+
+                <form action="SignUp.php">
+
                     <input id="signUp" type="submit" value="Sign Up">
                 </form>
             </td>
             <td>
-                <form action="login.html">
+
+                <form action="login.php">
+
                     <input id="login" type="submit" value="Login">
                 </form>
             </td>

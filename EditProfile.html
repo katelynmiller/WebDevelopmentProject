@@ -1,0 +1,111 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>BookWrm | Profile</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" href="images/icon.png">
+</head>
+
+<nav id="navbar" >
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <button class="dropdownbutton">Genres</button>
+            <div class="dropdown-content">
+                <a href="nonfictionCurrent.html">Non-Fiction</a>
+                <a href="">More Coming Soon...</a>
+                <a href="pastBooks.html">Past Reads</a>
+            </div>
+        </li>
+        <li><a href="login.html">Login </a></li>
+    </ul>
+</nav>
+<br>
+<br>
+
+<div id="SideNav" align="left">
+
+    <ul>
+        <li><a href="EditProfile.html">Edit information</a></li>
+        <br>
+        <li><a href="ResetPassword.html">Reset Password</a></li>
+        <br>
+        <li><a href="Bookshelf.html">Bookshelf</a></li>
+    </ul>
+</div>
+
+<center> 
+    <div id="ProfileDiv">
+    <table id="ProfileTable">
+        
+    <form>
+
+    <th id="ProfileHeader">John Doe</th>
+    <tr>
+            <table>
+        <tr>
+        <td style="text-align: right;font-weight: bold;">
+           <label>Name: </label> 
+        </td>
+        <td >
+            <input type="text" value="John Doe" id="NamePro">
+        </td>
+        </tr>   
+            
+            <tr>
+        <td style="text-align: right;font-weight: bold;">
+           <label> Email: </label>
+        </td>
+        <td >
+            <input type="text" value="email@address.com" id="EmailePro">
+        </td>
+        </tr>  
+            
+        <tr>
+        <td style="text-align: right;font-weight: bold;">
+           <label> Date of Birth: </label>
+        </td>
+        <td id="BODPro">
+            <input type="date"  id="BODPro">
+        </td>
+        </tr>  
+            
+        <tr>
+        <td  style="text-align: right;font-weight: bold;">
+           <label> Favorite Genre: </label>
+        </td>
+        <td >
+            <select id="FavoriteGenre" name="Genre">
+            <option value="Action">Action</option>
+            <option value="Non-Fiction">Non-Fiction</option>
+            <option value="Mystery">Mystery</option>
+            </select> 
+        </td>
+        </tr>  
+            
+        </table>
+
+        <br>
+        <input type="submit" value="Chnage profile">
+
+    </form>
+    </tr>
+    
+    </table>
+    </div>   
+        
+    </center>   
+
+
+    
+    
+<footer>
+    <p id="footer">
+        <a href="mailto:abc@example.com">
+            <b>Contact Us</b>
+        </a>
+    </p>
+</footer>
+
+</html>

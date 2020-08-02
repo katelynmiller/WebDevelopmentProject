@@ -1,8 +1,5 @@
-html {
-    font-family: 'Gentium Book Basic', serif;
-}
 body {
-    background-color: #FFECD1;
+    background-color: #EAF2EF;
     margin: 0;
 }
 
@@ -28,12 +25,14 @@ ul {
 	list-style-type: none;
 	padding: 0;
 	top: 0;
+	font-family: courier;
 	display: flex;
 	}
 
 li {
 	padding: 0;
 	top: 0;
+	font-family: courier;
 }
 
 #welcome {
@@ -43,7 +42,7 @@ li {
 }
   
 #navbar, nav {
-	background-color: #15616D;
+	background-color: #75B09C;
     width: 100%;
     padding: 0px;
     text-align: right;
@@ -54,7 +53,7 @@ li {
 /* Links inside the navbar */
 #navbar li a, .dropdown, .dropdownbutton{
 	display: block;
-	color: #FFECD1;
+	color: #0D090A;
 	padding: 14px 10px;
 	font-size: 20px;
 	text-decoration: none;
@@ -92,27 +91,29 @@ a:link, a:visited {
 }
 
 a:hover {
-	color: #FF7D00;
+	color: #A0CA92;
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
 	display: none;
 	position: absolute;
-	background-color: rgba(21, 97, 109, 0.6);
+	background-color: rgba(205, 216, 212, 0.9);
 	z-index: 1;
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-
+/* Add a pink text color to navbar links on hover */
 #navbar a:hover, .dropdown:hover, .dropdownbutton:hover, .dropdown-content a:hover {
-    background-color: #001524;
+    color: #361F27;
+    background-color: #A0CA92;
 }
 
 
 /* Links inside the dropdown */
 .dropdown-content a {
+	font-family: courier;
 	text-decoration: none;
 }
 
@@ -123,6 +124,7 @@ a:hover {
 
 #footer, #footer a {
     text-align: center;
+    text-emphasis: emphasis;
 }
 
 .center {
@@ -131,25 +133,33 @@ a:hover {
 }
 
 input[type=submit] {
-    background-color: #FF7D00;
-    border-color: #78290F;
-    color: #78290F;
-    font-size: 20px;
-    font-family: 'Gentium Book Basic', serif;
+    background-color: #A0CA92;
+    border-color: #75B09C;
+    color: #361F27;
+	font-family: courier;
+	font-size: 20px;
+}
+
+.center td input[type=submit] {
+    margin: 25px;
 }
 
 input[type=submit]:hover {
-    background-color: #78290F;
-    border-color: #78290F;
-    color: #FFECD1;
+    background-color: #75B09C;
+    border-color: #75B09C;
+    color: #0D090A;
+	font-family: courier;
 	font-size: 20px;
 }
 
 table th {
-    background-color: #FF7D00;
-    color: #78290F;
+    background-color: #A0CA92;
     text-align: center;
     font-size: 18px;
+}
+
+table.center {
+    border: thin;
 }
 
 #signupPrompt {
@@ -164,20 +174,38 @@ footer {
     position: fixed;
     width: 100%;
     text-align: center;
-	background-color: rgba(21, 97, 109, 0.6);
+    background-color: rgba(205, 216, 212, 0.9);
 }
 
-table form {
+input#signUp, input#login {
     margin-top: 5px;
     margin-bottom: 35px;
-    text-align: center;
-}
-
-#login, #signUp {
-    margin-bottom: 75px;
 }
 
 p.signUptxt, p.loginTxt {
     font-size: 16px;
     text-align: center;
+}
+
+#ProfileDiv{
+    font-size: 20px;
+    margin: 30px;
+    
+}
+#SideNav{
+    padding: 5px;
+    height: 60px;
+    background-color: aquamarine;
+}
+#SideNav li{
+    margin:10px;
+    padding: 5px;
+}
+
+#ProfileHeader{
+    width: 500px;
+    column-span: 2;
+    background-color: rgb(135, 222, 179);
+    border-radius: 3px;
+    height: 40px;
 }

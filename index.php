@@ -1,5 +1,8 @@
 <html>
-<?php include('session.php');?>
+<?php 
+include('config.php');
+session_start();
+?>
 <head>
     <meta charset="utf-8">
     <title>BookWrm | Welcome</title>    

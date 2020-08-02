@@ -1,6 +1,31 @@
 <html>
+<?php
+require_once('config.php');
+session_start();
 
+define('UN', 'username');
+define('PW', 'password');
 
+$error = "";
+
+function getUsername()
+{
+    $value = "";
+    if (isset($_POST[UN])) {
+        $value = $_POST[UN];
+    }
+    return $value;
+}
+
+function getPassword()
+{
+    $value2 = "";
+    if (isset($_POST[PW])) {
+        $value2 = $_POST[PW];
+    }
+    return $value2;
+}
+?>
 
 <head>
     <meta charset="utf-8">
@@ -12,8 +37,6 @@
 
 <nav id="navbar">
     <ul>
-
-
         <li><a href="index.php">Home</a></li>
         <li class="dropdown">
             <button class="dropdownbutton" href="genre.php">Genres</button>
@@ -33,28 +56,23 @@
 
 <body>
 
-
     <form id="login" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <table class="center" id="first" style="background-color: rgba(255, 125, 0, 0.2);">
-
             <tr>
                 <th colspan="2">
                     <b>Login</b>
                     </td>
             </tr>
             <tr>
-
                 <td colspan="2">
                     <?php echo $error; ?>
                 </td>
             </tr>
             <tr>
-
                 <td style="text-align: right;">
                     <label><b>Username: </b></label>
                 </td>
                 <td style="text-align: left;">
-
                     <input id="username" name="<?php echo UN; ?>" type="text" value="<?php echo getUsername(); ?>" />
                 </td>
             </tr>
@@ -63,14 +81,12 @@
                     <label><b>Password: </b></label>
                 </td>
                 <td style="text-align: left;">
-
                     <input id="password" name="<?php echo PW; ?>" type="password" value="<?php echo getPassword(); ?>" />
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
                     <p id="signupPrompt">Don't have an account?
-
                         <a href="SignUp.php">Sign Up!</a>
                     </p>
                 </td>
@@ -85,7 +101,6 @@
         </table>
     </form>
 </body>
-
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = getUsername();
@@ -127,7 +142,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 </script>
-
 <footer>
     <p id="footer">
         <a href="mailto:abc@example.com">

@@ -1,8 +1,5 @@
 <html>
-<?php 
-include('config.php');
-session_start();
-?>
+
 <head>
     <meta charset="utf-8">
     <title>BookWrm | Welcome</title>    
@@ -13,20 +10,16 @@ session_start();
 
 <nav id="navbar">
     <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="genre.php">Genre</a></li>
-        <?php 
-        if(empty($_SESSION['username'])) {
-            //if not on index of login page, instead echo:
-            //"<li><a href='login.php'>Login</a></li>"
-            echo "<li><a href='SignUp.php'>Sign Up</a></li>"; 
-        } else { 
-            echo "<li class='dropdown'><button class='dropdownbutton' href='Profile.php'>Profile</button><div class='dropdown-content' style='right: 0;'>
-                        <a href='Editprofile.php'>Edit Profile</a>
-                        <a href='ResetPassword.php'>Reset Password</a>
-                        <a href='Bookshelf.php'>Bookshelf</a>
-                        <a href='logout.php'>Logout</a>
-                    </div></li>"; }?>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <button class="dropdownbutton">Genres</button>
+            <div class="dropdown-content">
+                <a href="nonfictionCurrent.html">Non-Fiction</a>
+                <a href="">More Coming Soon...</a>
+                <a href="pastBooks.html">Past Reads</a>
+            </div>
+        </li>
+        <li><a href="login.html">Login </a></li>
     </ul>
 </nav>
 
@@ -59,12 +52,12 @@ session_start();
         </tr>
         <tr>
             <td>
-                <form action="SignUp.php">
+                <form action="signUp.html">
                     <input id="signUp" type="submit" value="Sign Up">
                 </form>
             </td>
             <td>
-                <form action="login.php">
+                <form action="login.html">
                     <input id="login" type="submit" value="Login">
                 </form>
             </td>

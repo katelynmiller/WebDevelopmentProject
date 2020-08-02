@@ -1,11 +1,4 @@
- <?php
-    $db=new mysqli('localhost','root','wit123','bookwrm');
-    $user="root";
-    $pass="wit123";
-    $SELECT_GENRES =  "SELECT * FROM genres ORDER BY bookGenreId";
-    $genre_result = $db->query($SELECT_GENRES);
-?> 
-
+<html>
 <?php 
 include('config.php');
 session_start();
@@ -57,48 +50,30 @@ session_start();
                     </div></li>"; }?>
     </ul>
 </nav>
-  <body>
-  <div class='wrapper'>
-    <?php
-    echo "<div class='col-sm-6'>";
-    while($row = $genre_result->fetch_assoc()){
-      
-     
-      echo "<div class='card'>";
-        echo "<div class='card-body'>";
-   
-    echo " <img src='" .$row['imageDir']. "' class='card-img-top' /> ";
-    echo "<h5 class='card-title'>".$row['name']."</h5>";
-    echo "<a href='resources_" .$row['name'].".php' class='btn btn-primary'
-              >Click here for " .$row['name'] ." books and resources related to this
-              genre</a>";
-    echo "</div>";
-echo "        </div>";
+<body>
+  <div class="wrapper">
+    <div class="list-group" style="display: grid; padding: 20px;">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="scifi.jpg" alt="Card image cap" />
+        <li class="list-group-item-primary">Sci-Fi Resources</li>
 
-
-
-    }
-    echo "        </div>";
-    ?>
-
-          </div>
+        <a
+          href="https://www.sparknotes.com/lit/"
+          class="list-group-item list-group-item-action"
+          id="resourceLinks"
+          >SparkNotes</a
+        >
+        <a
+          href="https://www.youtube.com/watch?v=T4j5tGNms14"
+          class="list-group-item list-group-item-action"
+          id="resourceLinks"
+          >Evolution of Science Fiction</a
+        >
+    
+       
+    
+      </div>
+    </div>
+        </div>
   </body>
 </html>
-
-<!-- <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <img src="scifi.jpg" class="card-img-top" />
-            <h5 class="card-title">Sci Fi</h5>
-            <p class="card-text">
-              Books relating to different Sci-fiction subjects such as time
-              travel, space exploration ,etc.
-            </p>
-            <a href="#" class="btn btn-primary"
-              >Click here for Sci-Fi books and resources related to this
-              genre</a
-            >
-          </div>
-        </div>
-      </div>
-    </div> -->

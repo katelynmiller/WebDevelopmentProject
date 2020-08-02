@@ -221,14 +221,8 @@ table form {
   text-align: center;
 }
 
-
-
-#login, #signUp {
-    margin-bottom: 75px;
+p.signUptxt,
+p.loginTxt {
+  font-size: 16px;
+  text-align: center;
 }
-
-p.signUptxt, p.loginTxt {
-    font-size: 16px;
-    text-align: center;
-}
-

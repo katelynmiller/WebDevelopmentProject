@@ -124,9 +124,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($numOfRows == 1) {
         $_SESSION["username"] = $name;
         header("Location: Profile.php");
-    } else {
+    } 
+    if (!isset($_SESSION["username"])) {
         $error = "Your username or password is invalid";
-        echo $error;
+        echo "<table class='center'><tr><td colspan='2' style='color: red'>".$error."</td></tr></table>";
     }
     mysqli_close($connection);
 }

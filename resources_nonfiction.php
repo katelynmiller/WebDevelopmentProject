@@ -32,17 +32,16 @@ session_start();
     <link rel="icon" href="icon.png">
 </head>
 
+
 <nav id="navbar">
     <ul>
         <li><a href="index.php">Home</a></li>
         <li><a href="genre.php">Genre</a></li>
         <?php 
         if(empty($_SESSION['username'])) {
-            //if not on index of login page, instead echo:
-            //"<li><a href='login.php'>Login</a></li>"
-            echo "<li><a href='SignUp.php'>Sign Up</a></li>"; 
+            echo "<li><a href='login.php'>Login</a></li>";
         } else { 
-            echo "<li class='dropdown'><button class='dropdownbutton' href='Profile.php'>Profile</button><div class='dropdown-content' style='right: 0;'>
+            echo "<li class='dropdown'><button class='dropdownbutton' onclick=\"window.location.href='Profile.php';\">Profile</button><div class='dropdown-content' style='right: 0;'>
                         <a href='Editprofile.php'>Edit Profile</a>
                         <a href='ResetPassword.php'>Reset Password</a>
                         <a href='Bookshelf.php'>Bookshelf</a>

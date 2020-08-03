@@ -15,7 +15,7 @@ $DOB = $_POST['dob'];
 $Genre = $_POST['Genre'];
 
 
-$sql = "INSERT INTO " .$db_table. " (`name`, 'username', `user_email`, `dob`, `genre`, `user_name`, `user_password`)
+$sql = "INSERT INTO " .$db_table. " (`name`, 'user_name', `user_email`, `dob`, `genre`, `user_name`, `user_password`)
  VALUES ('$name','$username','$email','$DOB','$Genre','$email','$password')";
 
 mysqli_query($connection,$sql);

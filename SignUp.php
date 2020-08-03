@@ -34,7 +34,10 @@
                     <td  style="text-align: right;font-weight: bold;">Name: </td>
                     <td ><input id="SignName" type="textbox" placeholder="Name" name="name"/></td>
                 </tr>   
-        
+                <tr>
+                    <td  style="text-align: right;font-weight: bold;">Username: </td>
+                    <td ><input id="SignName" type="textbox" placeholder="Name" name="username"/></td>
+                </tr> 
                 <tr>
                     <td  style="text-align: right;font-weight: bold;">Email: </td>
                     <td><input id="email" type="textbox" name="email" placeholder="username@email.com" /></td>

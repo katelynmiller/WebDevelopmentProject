@@ -52,7 +52,7 @@ session_start();
 <body>
   <div class="wrapper">
     <div class="list-group" style="display: grid; padding: 20px;">
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="margin-top:100px; text-align: center; margin-right: auto; margin-left: auto; width: 50%">
         <img class="card-img-top" src="history.jpg" alt="Card image cap" />
         <li class="list-group-item-primary">History Resources</li>
 

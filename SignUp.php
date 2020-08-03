@@ -9,16 +9,18 @@
 
 <nav id="navbar">
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-            <button class="dropdownbutton">Genres</button>
-            <div class="dropdown-content">
-                <a href="nonfictionCurrent.html">Non-Fiction</a>
-                <a href="">More Coming Soon...</a>
-                <a href="pastBooks.html">Past Reads</a>
-            </div>
-        </li>
-        <li><a href="login.php">Login </a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="genre.php">Genre</a></li>
+        <?php 
+        if(empty($_SESSION['username'])) {
+            echo "<li><a href='login.php'>Login</a></li>";
+        } else { 
+            echo "<li class='dropdown'><button class='dropdownbutton' onclick=\"window.location.href='Profile.php';\">Profile</button><div class='dropdown-content' style='right: 0;'>
+                        <a href='Editprofile.php'>Edit Profile</a>
+                        <a href='ResetPassword.php'>Reset Password</a>
+                        <a href='Bookshelf.php'>Bookshelf</a>
+                        <a href='logout.php'>Logout</a>
+                    </div></li>"; }?>
     </ul>
 </nav>
 <br>

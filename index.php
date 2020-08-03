@@ -21,7 +21,7 @@ session_start();
             //"<li><a href='login.php'>Login</a></li>"
             echo "<li><a href='SignUp.php'>Sign Up</a></li>"; 
         } else { 
-            echo "<li class='dropdown'><button class='dropdownbutton' href='Profile.php'>Profile</button><div class='dropdown-content' style='right: 0;'>
+            echo "<li class='dropdown'><button class='dropdownbutton' onclick=\"window.location.href='Profile.php';\">Profile</button><div class='dropdown-content' style='right: 0;'>
                         <a href='Editprofile.php'>Edit Profile</a>
                         <a href='ResetPassword.php'>Reset Password</a>
                         <a href='Bookshelf.php'>Bookshelf</a>

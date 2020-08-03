@@ -57,9 +57,9 @@ session_start();
     </ul>
 </nav>
   <body>
-  <div class='wrapper'>
+  <div class='wrapper' style="width: 100%; margin-right: auto; margin-left: auto;">
     <?php
-    echo "<div class='col-sm-6'>";
+    echo "<div  style='margin-top:100px; text-align: center; margin-right: auto; margin-left: auto; width: 50%'>";
     while($row = $genre_result->fetch_assoc()){
       
      
@@ -81,6 +81,7 @@ echo "        </div>";
     ?>
 
           </div>
+    </table>
   </body>
 </html>
 

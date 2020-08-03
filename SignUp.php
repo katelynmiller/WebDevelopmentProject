@@ -27,7 +27,7 @@
 <br>
 
 <body>
-    <form id="sign_up" method="POST" action="CreateUser.php">
+    <form id="sign_up" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <table class="center" id="ProfileTable">
             <th colspan="2">Sign Up</th>
                 <tr>
@@ -36,7 +36,7 @@
                 </tr>   
                 <tr>
                     <td  style="text-align: right;font-weight: bold;">Username: </td>
-                    <td ><input id="SignName" type="textbox" placeholder="username" name="username"/></td>
+                    <td ><input id="username" type="textbox" placeholder="username" name="username"/></td>
                 </tr> 
                 <tr>
                     <td  style="text-align: right;font-weight: bold;">Email: </td>
@@ -57,7 +57,7 @@
                 <tr>
                     <td style="text-align: right;font-weight: bold;">Favorite Genre: </td>
                     <td>
-                        <select id="FavoriteGenre" name="Genre" name="genre">
+                        <select id="FavoriteGenre" name="Genre" >
                             <option value="Action">Action</option>
                             <option value="Non-Fiction">Non-Fiction</option>
                             <option value="Mystery">Mystery</option>
@@ -75,6 +75,30 @@
                 <br>  
             </table>
         </form>
+        <?php 
+
+        include('config.php');
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $db_table = "user";
+
+            $name = $_POST['name'];
+            $username = $_POST['username'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $DOB = $_POST['dob'];
+            $Genre = $_POST['Genre'];
+
+            $sql = "INSERT INTO " .$db_table. " (name, user_name, user_email, dob, genre, user_password)
+                VALUES ('$name','$username','$email','$DOB','$Genre','$password');";
+
+            mysqli_query($connection, $sql);
+
+            header("Location:login.php"); 
+
+            mysqli_close($connection);
+        }
+
+        ?>
     </body>
     <script>
         window.onload = function() {

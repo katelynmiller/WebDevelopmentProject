@@ -129,7 +129,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_close($connection);
 }
 ?>
-     
+   <script>
+        window.onload = function() {
+            var boxName = document.getElementById('OriginalPassword');
+            boxName.focus();
+        }
+    </script>    
 <footer>
     <p id="footer">
         <a href="mailto:abc@example.com">

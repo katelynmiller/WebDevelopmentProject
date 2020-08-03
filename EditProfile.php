@@ -94,22 +94,26 @@ $row = $result->fetch_assoc();
         </td>
         <td >
             <select id="FavoriteGenre" name="Genre">
-            <option value="Action">Action</option>
-            <option value="Non-Fiction">Non-Fiction</option>
-            <option value="Mystery">Mystery</option>
-            <option value="<?php echo $row['genre'];  ?>" selected="selected"><?php echo $row['genre'];  ?></option>
+                <option value="Action">Action</option>
+                <option value="Non-Fiction">Non-Fiction</option>
+                <option value="Mystery">Mystery</option>
+                <option value="<?php echo $row['genre'];  ?>" selected="selected"><?php echo $row['genre'];  ?></option>
             </select> 
         </td>
         </tr>  
         <tr>
             <td colspan="2" style="text-align: center">
-                <br>
                 <input type="submit" value="Change profile">
             </td>
         </tr> 
         </table>
 
-        
+        <script>
+        window.onload = function() {
+            var boxName = document.getElementById('NamePro');
+            boxName.focus();
+        }
+    </script>     
 
 </form>
     </div>   

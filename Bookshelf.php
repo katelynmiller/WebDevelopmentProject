@@ -43,7 +43,7 @@
 
 
 <h2 style="text-align: center">Bookshelf</h2>
-
+<p style="text-align: center;">&#x26A0 This page is currently under construction! &#x26A0</p>
     
 <footer>
     <p id="footer">

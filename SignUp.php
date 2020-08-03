@@ -36,7 +36,7 @@
                 </tr>   
                 <tr>
                     <td  style="text-align: right;font-weight: bold;">Username: </td>
-                    <td ><input id="SignName" type="textbox" placeholder="Name" name="username"/></td>
+                    <td ><input id="SignName" type="textbox" placeholder="username" name="username"/></td>
                 </tr> 
                 <tr>
                     <td  style="text-align: right;font-weight: bold;">Email: </td>

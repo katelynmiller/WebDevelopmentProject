@@ -52,13 +52,13 @@ $row = $result->fetch_assoc();
         <br>
         <li><a href="Bookshelf.php">Bookshelf</a></li>
         <br>
-        <li><a href="logout.php">Log out</a></li>
+        <li><a href="logout.php">Logout</a></li>
     </ul>
 </div>
 
 
     <div id="ProfileDiv">
-        <form id="EditProfile" method="POST" action="EditConfig.php">
+        <form id="EditProfile" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <table id="ProfileTable" class="center">
     <th id="ProfileHeader" colspan="2">Edit Information</th>
         <tr>
@@ -116,10 +116,28 @@ $row = $result->fetch_assoc();
     </script>     
 
 </form>
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $db_table = "user";
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+$DOB = $_POST['dob'];
+$Genre = $_POST['Genre'];
+
+
+$sql = "UPDATE " .$db_table. " SET name = '$name', user_email = '$email',dob = '$DOB',genre = '$Genre' WHERE user_name='".$_SESSION["username"]."';";
+
+mysqli_query($connection,$sql);
+
+header("Location:Profile.php");
+
+mysqli_close($connection);
+}
+?>
     </div>   
    
-
-
     
     
 <footer>
@@ -129,7 +147,7 @@ $row = $result->fetch_assoc();
         </a>
     </p>
 </footer>
-<script>
+<!-- <script>
 
 const EditProfile = document.getElementById("EditProfile");
 
@@ -143,18 +161,8 @@ const genre = document.getElementById("FavoriteGenre");
 
 e.preventDefault();
 
-if (NewPassword.value !== ConfirmPassword.value){
-    console.log("Missing title");
-    alert("Passwords don't match");
-}
-
-else{
-    console.log("form has been submitted");
-}
-
 });
 
 
-</script>
-<?php mysqli_close($connection); ?>
+</script> -->
 </html>
